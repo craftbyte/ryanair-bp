@@ -1,6 +1,8 @@
-# ryanair-bp
+# Ryanair Boarding Pass Extractor
 
-This template should help get you started developing with Vue 3 in Vite.
+Ryanair doesn't allow you to get a PDF of a boarding pass anymore and requires you to use their horrible app. This tool allows you to get the Apple and Google Wallet passes for your booking.
+
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/craftbyte/ryanair-bp)
 
 ## Recommended IDE Setup
 
