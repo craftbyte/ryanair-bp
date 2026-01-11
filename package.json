@@ -16,7 +16,6 @@
 		"cf-typegen": "wrangler types"
 	},
 	"dependencies": {
-		"nayuki-qr-code-generator": "^1.8.0",
 		"vue": "^3.5.25",
 		"vue-router": "^4.6.3"
 	},
