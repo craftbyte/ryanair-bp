@@ -52,6 +52,12 @@ const getBoardingPass = async (event: Event) => {
         Get Boarding Passes
       </button>
     </form>
+    <article aria-invalid="true" v-if="errorText">
+      <header>
+        <strong>Error</strong>
+      </header>
+      {{ errorText }}
+    </article>
     <div v-if="boardingPasses.length" class="grid boarding-pass-list">
       <BoardingPass
         v-for="(bp, index) in boardingPasses"
