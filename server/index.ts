@@ -23,8 +23,13 @@ async function getBoardingPass(request: Request): Promise<Response> {
 		}
 	})
 
+	let headers = new Headers();
+	if (passData.headers.get("Content-Type")) {
+		headers.set("Content-Type", passData.headers.get("Content-Type")!);
+	}
+
     return new Response(passData.body, {
-        headers: { "Content-Type": passData.headers.get("Content-Type") || "application/json" },
+        headers: headers,
 		status: passData.status,
 		statusText: passData.statusText
     });
@@ -40,11 +45,16 @@ async function getAppleWalletPass(request: Request): Promise<Response> {
 			'client': 'trans-rights'
 		}
 	})
-	return new Response(passData.body, {
-		headers: { "Content-Type": "application/vnd.apple.pkpass" },
+	let headers = new Headers();
+	if (passData.headers.get("Content-Type")) {
+		headers.set("Content-Type", passData.headers.get("Content-Type")!);
+	}
+
+    return new Response(passData.body, {
+        headers: headers,
 		status: passData.status,
 		statusText: passData.statusText
-	})
+    });
 }
 
 async function getGoogleWalletPass(request: Request): Promise<Response> {
@@ -56,9 +66,14 @@ async function getGoogleWalletPass(request: Request): Promise<Response> {
 			'client': 'trans-rights'
 		}
 	})
-	return new Response(passData.body, {
-		headers: { "Content-Type": passData.headers.get("Content-Type") || "application/json" },
+	let headers = new Headers();
+	if (passData.headers.get("Content-Type")) {
+		headers.set("Content-Type", passData.headers.get("Content-Type")!);
+	}
+
+    return new Response(passData.body, {
+        headers: headers,
 		status: passData.status,
 		statusText: passData.statusText
-	})
+    });
 }
