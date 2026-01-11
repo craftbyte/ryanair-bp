@@ -13,6 +13,7 @@
 	"observability": {
 		"enabled": true
 	},
+	"workers_dev": true,
 	"routes": [
 		{
 			"pattern": "ryanair.anze.dev",
